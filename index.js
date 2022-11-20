@@ -3,7 +3,7 @@ const app = express();
 
 app.get("/aluno", (req, res )=> {
     let usuario = {
-                    nome: "Claudio Nunes",
+                    nome: "Raphael Moura de Almeida",
                     disciplina : "Topicos Especiais",
                     curso : "ADS"
     }
@@ -24,7 +24,19 @@ app.get("/professores", (req, res )=> {
     res.send(professores);
 }) ;
 
+app.get("/alunos", (req, res )=> {
+    let colegas = [ {
+               nome : "Fernando",
+               sobrenome : "Vinicius"
+    },
+    {
+        nome : "Lucas",
+        sobrenome : "Cravo"
+    },
+        res.send(colegas);
+}) ;
+
 
 app.listen(3000, () => {
-    console.log("funfando...");
+    console.log("OK...");
 })
