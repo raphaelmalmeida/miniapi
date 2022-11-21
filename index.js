@@ -2,11 +2,16 @@ const express = require("express");
 const app = express();
 
 app.get("/aluno", (req, res )=> {
-    let usuario = {
-                    nome: "Raphael Moura de Almeida",
+    let usuario = [{
+                    nome: "Raphael Almeida",
                     disciplina : "Topicos Especiais",
-                    curso : "ADS"
-    }
+                    curso : "ADS Noite"
+    },
+        {
+                    nome: "Raphael",
+                    disciplina : "Topicos Especiais",
+                    curso : "ADS Night"
+    }]
     res.send(usuario)
 }) ;
 
@@ -24,19 +29,7 @@ app.get("/professores", (req, res )=> {
     res.send(professores);
 }) ;
 
-app.get("/alunos", (req, res )=> {
-    let colegas = [ {
-               nome : "Fernando",
-               sobrenome : "Vinicius"
-    },
-    {
-        nome : "Lucas",
-        sobrenome : "Cravo"
-    },
-        res.send(colegas);
-}) ;
-
 
 app.listen(3000, () => {
-    console.log("OK...");
+    console.log("funfando...");
 })
