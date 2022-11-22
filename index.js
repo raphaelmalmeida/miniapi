@@ -2,16 +2,11 @@ const express = require("express");
 const app = express();
 
 app.get("/aluno", (req, res )=> {
-    let usuario = [{
+    let usuario = {
                     nome: "Raphael Almeida",
                     disciplina : "Topicos Especiais",
-                    curso : "ADS Noite"
-    },
-        {
-                    nome: "Raphael",
-                    disciplina : "Topicos Especiais",
-                    curso : "ADS Night"
-    }]
+                    curso : "ADS"
+    }
     res.send(usuario)
 }) ;
 
